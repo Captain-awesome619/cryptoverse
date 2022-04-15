@@ -54,6 +54,7 @@ const Cryptocurrencies = ({ simplified }) => {
                 <p>Daily Change: {currency.change}%</p>
               </Card>
             </Link>
+            <Link key={currency.uuid} to={`/crypto/${currency.uuid}`}><button type="button"> see details </button></Link>
           </Col>
         ))}
       </Row>
