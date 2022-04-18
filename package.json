@@ -1,3 +1,4 @@
+
 {
   "name": "cryptoverse",
   "version": "0.1.0",
@@ -29,6 +30,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+
   "eslintConfig": {
     "extends": [
       "react-app",
