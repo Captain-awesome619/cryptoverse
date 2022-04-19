@@ -17,7 +17,7 @@ const Cryptocurrencies = ({ simplified }) => {
 
     const filteredData = cryptosList?.data?.coins.filter((item) => item.name.toLowerCase().includes(searchTerm));
 
-    setCryptos(filteredData);
+     setCryptos(filteredData);
   }, [cryptosList, searchTerm]);
 
   if (isFetching) return <Loader />;
@@ -42,9 +42,9 @@ const Cryptocurrencies = ({ simplified }) => {
             key={currency.uuid}
           >
 
-            {/* Note: Change currency.id to currency.uuid  */}
+            {/* Note: Change currency.id to currency.uuid */}
             <Link key={currency.uuid} to={`/crypto/${currency.uuid}`}>
-              <Card 
+              <Card
                 className="hove"
                 title={`${currency.rank}. ${currency.name}`}
                 extra={<img className="crypto-image" src={currency.iconUrl} />}
