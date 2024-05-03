@@ -2,9 +2,10 @@
 import React from 'react';
 import { Line } from 'react-chartjs-2';
 import { Col, Row, Typography } from 'antd';
+import { Chart, registerables } from 'chart.js';
 
 const { Title } = Typography;
-
+Chart.register(...registerables);
 const LineChart = ({ coinHistory, currentPrice, coinName }) => {
   const coinPrice = [];
   const coinTimestamp = [];
@@ -32,13 +33,13 @@ const LineChart = ({ coinHistory, currentPrice, coinName }) => {
 
   const options = {
     scales: {
-      yAxes: [
+      yAxes:
         {
           ticks: {
             beginAtZero: true,
           },
         },
-      ],
+
     },
   };
 
